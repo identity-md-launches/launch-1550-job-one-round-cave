@@ -1,0 +1,50 @@
+{
+  "name": "Every Link Remembered",
+  "ancestor_sha256": "e1639b0f4d56665ff6c8a82ceea9d3508a84f5ee13c9c9a12a72a2718433cbaa",
+  "generated_motif_sha256": "a345a05839fba561e2a44c8bcc85259751d6f5aa1380afe59bce8ded786d57e0",
+  "wall_sha256": "d3fc8b1adffeca7858bb0860274d6242f23f661b057c36c75fff77f0eeab74ae",
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v21.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "colour": "8-bit RGB",
+    "bytes": 4003916
+  },
+  "addition_rectangle": [
+    908,
+    130,
+    248,
+    35
+  ],
+  "generated_crop": [
+    140,
+    330,
+    1500,
+    190
+  ],
+  "changed_pixels": 2883,
+  "changed_pixels_outside_addition": 0,
+  "method": "Installed built-in image generator supplied the motif; Node built-ins removed white in memory and composited pigment only in vacant rock. Generated motif overwritten by final wall.",
+  "jpeg": {
+    "path": "dist/line-4/40.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 77395
+  },
+  "visual_review": {
+    "pepe": "Inherited wide mouth and heavy-lidded eyes preserved unchanged",
+    "digits": "Both inherited Pepe hands and the hand stencil retain five digits each; no new hands",
+    "forbidden_marks": "No letters, numbers, captions, signatures, logos, watermarks, borders, frames, real people or prohibited symbols observed",
+    "unmet_visual_requirements": [],
+    "limitations": "The new mark is small and subdued at thumbnail size; inherited rock texture retained as supplied. Local review only."
+  }
+}

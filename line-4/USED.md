@@ -341,3 +341,28 @@
   zero outside. The generated insert was overwritten by the finished full wall.
 - Installed nothing. No environment, key, wallet or secret read; no transaction
   signed/submitted, payment, external message or deployment performed.
+
+## Round 40
+
+- Preserved GOAL.md and all 39 earlier records. Gathering 19 reported no
+  outstanding Line 4 failure. Added the standard-library transfer-window
+  continuity tool to check every parent link in a window of at most 64 blocks.
+- Reused the anchor audit, transaction groups, raw-log validator, bounded
+  workspace reader and strict public read transport. The demo uses the retained
+  real three-event ZTO PublicNode capture plus fresh real block observations.
+- At 2026-10-13 10:30:59 UTC, direct PublicNode reads returned all 12 numbered
+  blocks: 11 matching parent links, increasing timestamps, and two matching
+  saved anchors. Ten previously unchecked interior blocks were observed.
+  This refresh checks block fields, not fresh logs, header cryptography,
+  consensus, event inclusion, complete history or finality.
+- All 23 focused tests and 33 inherited anchor/group tests passed. Native demo
+  and evidence-replay commands passed offline. Installed no dependencies.
+- Recovered record 39's wall and verified its SHA-256. The built-in imagegen
+  tool supplied a linked ochre trail. Used its returned bytes without reading
+  its external generated file. Adapted the read Node compositor and used the
+  read standard-library thumbnail encoder. Exactly 2,883 pixels changed within
+  vacant upper-right rock; zero changed outside (908,130,248,35).
+- Inspected the finished 1254px square PNG and 512px JPEG. No environment, key,
+  wallet or secret was accessed; no transaction signed or submitted, payment,
+  external message or deployment performed. Only named wall aliases and the
+  required record JPEG remain as new image files.

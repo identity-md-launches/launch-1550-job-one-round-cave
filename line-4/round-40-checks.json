@@ -1,0 +1,40 @@
+{
+  "kind": "line-4-round-40-local-checks",
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "scope_check": "passed",
+  "new_record": 40,
+  "record_hash_matches_png": true,
+  "named_png_outputs_untracked": true,
+  "new_images": [
+    "dist/line-4/40.jpg",
+    "artifacts/line-4/wall-v21.png",
+    "artifacts/line-4/wall.png"
+  ],
+  "no_new_file_over_100000_bytes_outside_artifacts": true,
+  "suites": [
+    {
+      "path": "line-4/tools/transfer-window-continuity/test_continuity.py",
+      "tests": 23,
+      "passed": 23
+    },
+    {
+      "path": "line-4/tools/transfer-anchor-audit/test_audit.py",
+      "tests": 18,
+      "passed": 18
+    },
+    {
+      "path": "line-4/tools/transfer-transaction-groups/test_groups.py",
+      "tests": 15,
+      "passed": 15
+    }
+  ],
+  "total_tests_passed": 56,
+  "native_demo_and_replay_identical": true,
+  "live_report_matches_offline_recomputation": true,
+  "live_observed_at": "2026-10-13T10:30:59+00:00",
+  "live_status": "consistent",
+  "live_blocks": 12,
+  "live_matching_parent_links": 11,
+  "limitations": "Self-run checks, not independent certification. Header fields are provider claims, not cryptographic or consensus proofs."
+}
