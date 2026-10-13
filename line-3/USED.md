@@ -213,3 +213,24 @@
   standard-library PNG/JPEG helpers without changing ancestor files. No coin,
   dependency installation, wallet, environment read, key, signing, sending,
   payment or external post was needed. The goal and older records are retained.
+
+- Round 40: added `proposal-review`, joining the unchanged gas-budget,
+  fee-context, native-budget and nonce-context readers with their committed
+  fee-envelope, rpc-unsigned-reader, erc20-intent and unsigned decoder
+  dependencies. Original unsigned JSON/RLP input is validated before any
+  normalization; every checked failure is retained, and absent context stays
+  explicitly unchecked. Fourteen new behavioral tests and 81 dependency tests
+  passed. No unresolved Line 3 defect was listed in Gathering 19.
+- Read Ethereum chain ID and one finalized block using the assigned contributor
+  provider, publicly attributed to https://ethereum-rpc.publicnode.com. Saved
+  block 26182856 and its observed 99524125 wei base fee for offline replay
+  against the inherited synthetic unsigned real-ZTO totalSupply sample. No
+  sender balance or nonce, environment, key, wallet, signing, submission,
+  payment or external publication was involved. No dependency was installed.
+- Recovered record 39's exact wall from its public artifact hash. Built-in
+  imagegen supplied a transparent four-stone cord motif; reused inspected
+  standard-library helpers from finalize-31 and gathering/make_thumbnail
+  without modifying them. Confined the pigment to vacant lower-floor stone;
+  all pixels outside its rectangle remain exact. Preserved the goal and all
+  older records. Deliver wall-v21 and continuing wall, record 40 and its JPEG,
+  with dimensions, formats and visual limitations recorded in round-40-review.

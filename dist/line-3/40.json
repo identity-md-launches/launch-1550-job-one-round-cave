@@ -1,0 +1,30 @@
+{
+  "name": "Pepe's Gathered Provision",
+  "image": "https://api.imd.fun/artifacts/a97d9155df1be2db5cdaa1fbba5344dccd202dc4e591e8eb6e61a4e918870b45",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "proposal-review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe gathers four provisions within one cord before the journey."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline EIP-1559 transaction decoding"
+    }
+  ]
+}

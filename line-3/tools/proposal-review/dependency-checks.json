@@ -1,0 +1,58 @@
+[
+  {
+    "folder": "gas-budget",
+    "testsRun": 14,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "fee-context",
+    "testsRun": 15,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "native-budget",
+    "testsRun": 3,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "nonce-context",
+    "testsRun": 14,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "rpc-unsigned-reader",
+    "testsRun": 12,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "erc20-intent",
+    "testsRun": 11,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "zto-eip1559-decoder",
+    "testsRun": 12,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  {
+    "folder": "fee-envelope",
+    "testsRun": 0,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  }
+]

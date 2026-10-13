@@ -1,0 +1,139 @@
+{
+  "checkedViolations": [],
+  "contextChainId": "1",
+  "feeReview": {
+    "checkedViolations": [],
+    "context": {
+      "baseFeePerGasWei": "99524125",
+      "chainId": "1",
+      "source": "Explicit caller-supplied value; no block or freshness verified."
+    },
+    "fees": {
+      "baseFeeShortfallPerGasWei": "0",
+      "contextBurnCeilingAtGasLimitWei": "9952412500000",
+      "contextFeeCeilingAtGasLimitWei": "109952412500000",
+      "contextPriorityCeilingAtGasLimitWei": "100000000000000",
+      "effectiveGasPriceWei": "1099524125",
+      "effectivePriorityFeePerGasWei": "1000000000",
+      "feeCeilingAtGasLimitWei": "200000000000000",
+      "fullPriorityAvailable": true,
+      "maxBaseFeeForFeeCapWei": "2000000000",
+      "maxBaseFeeForFullPriorityWei": "1000000000",
+      "maxFeePerGasWei": "2000000000",
+      "maxPriorityFeePerGasWei": "1000000000",
+      "nativeFeeAsset": "ETH",
+      "valuePlusFeeCeilingWei": "200000000000000"
+    },
+    "inputFormat": "rlp",
+    "passesCheckedFeeConstraints": true,
+    "schema": "fee-context/v1",
+    "warnings": [
+      "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+      "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior.",
+      "EIP-1559 arithmetic only; caller must establish that these rules apply to the supplied context.",
+      "Base fee is unverified input, not a live quote or prediction. Token destination does not change the native gas asset.",
+      "Ceilings use gasLimit, not gas used; actual gas charges, refunds, execution, balance, nonce, block limits and inclusion are unverified.",
+      "No sender is supplied. Value plus fee ceiling is arithmetic, not proof of funds or safety to sign."
+    ]
+  },
+  "gasReview": {
+    "checkedViolations": [],
+    "counts": {
+      "accessAddressOccurrences": "0",
+      "accessStorageKeyOccurrences": "0",
+      "calldataTokens": "16",
+      "dataBytes": "4",
+      "initcodeWords": "0",
+      "nonzeroBytes": "4",
+      "uniqueAccessAddresses": "0",
+      "uniqueAddressStorageKeyPairs": "0",
+      "zeroBytes": "0"
+    },
+    "gas": {
+      "aboveMinimumGas": "78840",
+      "calldataFloorGas": "21160",
+      "components": {
+        "accessAddressGas": "0",
+        "accessStorageKeyGas": "0",
+        "baseGas": "21000",
+        "creationGas": "0",
+        "initcodeWordGas": "0",
+        "nonzeroByteGas": "64",
+        "zeroByteGas": "0"
+      },
+      "gasLimitMeetsMinimum": true,
+      "intrinsicGas": "21064",
+      "meaning": "Lower bound only, not an estimate of EVM execution or gas used.",
+      "requiredMinimumGasLimit": "21160",
+      "shortfallGas": "0",
+      "suppliedGasLimit": "100000"
+    },
+    "initcode": {
+      "isCreation": false,
+      "maximumBytes": null,
+      "sizeWithinLimit": null,
+      "wordMeteringApplied": false
+    },
+    "inputFormat": "rlp",
+    "passesCheckedConstraints": true,
+    "profile": "prague",
+    "schema": "gas-budget/v1",
+    "warnings": [
+      "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+      "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior.",
+      "Explicit historical gas profile only; no activation, execution, base fee, block limits, balance, nonce, refunds or safety to sign checked. Passing is not transaction validity."
+    ]
+  },
+  "inputFormat": "rlp",
+  "inspection": {
+    "calldata": {
+      "arguments": {},
+      "candidateMethod": "totalSupply",
+      "selector": "0x18160ddd",
+      "status": "abi-pattern-match"
+    },
+    "destinationLabel": "ZTO",
+    "feeBudget": {
+      "gasFeeCapWei": "200000000000000",
+      "meaning": "Gas limit times maximum fee per gas; excludes token transfers. Not an estimate.",
+      "valuePlusGasFeeCapWei": "200000000000000"
+    },
+    "transaction": {
+      "accessList": [],
+      "calldataSelector": "0x18160ddd",
+      "chainId": "1",
+      "data": "0x18160ddd",
+      "gasLimit": "100000",
+      "maxFeePerGas": "2000000000",
+      "maxPriorityFeePerGas": "1000000000",
+      "nonce": "0",
+      "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "type": "EIP-1559",
+      "typeByte": "0x02",
+      "value": "0"
+    },
+    "warnings": [
+      "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+      "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior."
+    ]
+  },
+  "limitations": [
+    "Only original unsigned type-2 RLP or a complete unsigned JSON-RPC object is accepted.",
+    "Profile and chain are explicit caller choices; fork activation is not detected.",
+    "Fee, balance and nonce context are unauthenticated caller assertions; no freshness or account association is established.",
+    "Unsigned input has no recoverable sender; token contract state is not sender context.",
+    "Pending-window competition and nonce gaps are diagnostics, not fee-replacement policy checks.",
+    "Unchecked context stays null. Passing the listed constraints is not full validity, execution, inclusion or safety to sign.",
+    "Fingerprint is SHA-256 of normalized unsigned bytes, not an Ethereum transaction hash; JSON spelling is not fingerprinted."
+  ],
+  "nativeBalanceReview": null,
+  "nonceReview": null,
+  "passesCheckedConstraints": true,
+  "schema": "proposal-review/v1",
+  "skippedContextChecks": [
+    "native-balance-coverage",
+    "account-nonce-context"
+  ],
+  "status": "no-checked-constraint-violation",
+  "unsignedBytesSha256": "106591983d34a682ebe28e41014d8a3157293293f229a4208f1c2079faf30d91"
+}

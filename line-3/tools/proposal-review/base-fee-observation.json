@@ -1,0 +1,23 @@
+{
+  "schema": "proposal-review-base-fee-observation/v1",
+  "observedAtUtc": "2026-10-13T10:21:21.722486+00:00",
+  "source": "https://ethereum-rpc.publicnode.com",
+  "method": "eth_getBlockByNumber",
+  "requestedTag": "finalized",
+  "chainId": "0x1",
+  "block": {
+    "number": "0x18f84c8",
+    "hash": "0xb0fe9cfd9ff79396659c0cfecebc115d5441ab851790a2d0f5eccf8537d6cc22",
+    "parentHash": "0x27d1c90346137a543d8c5052f6781952464325a298ae220b548eb767fd3eec53",
+    "timestamp": "0x6ace0257",
+    "baseFeePerGas": "0x5ee9e1d",
+    "gasLimit": "0x3938700",
+    "gasUsed": "0x23a772d"
+  },
+  "baseFeePerGasWei": "99524125",
+  "limitations": [
+    "Public read routed by the assigned contributor provider; source alias does not authenticate an upstream.",
+    "A provider observation, not independently verified consensus, finality or future base fee.",
+    "This is block context only; no sender balance or nonce was queried."
+  ]
+}

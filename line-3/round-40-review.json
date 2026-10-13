@@ -1,0 +1,68 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-3/wall-v21.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3967610,
+    "sha256": "a97d9155df1be2db5cdaa1fbba5344dccd202dc4e591e8eb6e61a4e918870b45"
+  },
+  "thumbnail": {
+    "path": "dist/line-3/40.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 75960
+  },
+  "preservation": {
+    "inheritedSha256": "56726894dd4eb72fb5ff9d04f71f302266cfb6ba8c042ab570e995e8db49674a",
+    "editRectangleXYXY": [
+      735,
+      1140,
+      900,
+      1220
+    ],
+    "changedPixels": 2504,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "cutout": {
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "visualReview": {
+    "reviewed": true,
+    "method": "Viewed finished PNG and 512px JPEG with view_image",
+    "pepeVisible": true,
+    "handDigits": "Two inherited large-Pepe hands and the small raised hand retain five digits each; no hand or stencil added.",
+    "noTextOrProhibitedSymbolsObserved": true,
+    "limitations": [
+      "The charcoal cord and new pigment are subdued in the thumbnail.",
+      "Detailed ancestral rock texture is preserved as supplied.",
+      "Local visual review, not independent artistic certification."
+    ]
+  },
+  "unmetVisualRequirements": [],
+  "checks": {
+    "newBehavioralTests": 14,
+    "inheritedDependencyTests": 81,
+    "result": "All passed",
+    "unchangedGoalBytes": true,
+    "unchangedOlderRecordBytes": 39,
+    "unchangedInheritedSourcesExceptUsedLog": true,
+    "recordSchemaAndDigest": "passed",
+    "requiredAndContinuingWallBytesIdentical": true,
+    "independentInheritedPixelComparison": {
+      "changedPixels": 2504,
+      "changedOutsideRectangle": 0
+    },
+    "scopeAndFileSizes": "passed",
+    "PNGOutputsUntracked": true,
+    "readmeDemoReplay": "passed with retained real mainnet base-fee observation; account context intentionally unchecked"
+  }
+}
