@@ -49,6 +49,18 @@ def witness(graph, root, changed):
     raise ValueError('affected root has no declared change route')
 
 
+def causes(graph, root, modified, removed):
+    """All reachable baseline changes, including changes beyond a changed root."""
+    reached, pending = set(), [root]
+    while pending:
+        path = pending.pop()
+        if path not in reached:
+            reached.add(path)
+            pending.extend(graph[path])
+    return {'root': root, 'modified_paths': sorted(reached & modified),
+            'removed_paths': sorted(reached & removed)}
+
+
 def normalize(document, limits):
     if (not isinstance(document, dict)
             or set(document) != {'format', 'roots', 'dependencies'}
@@ -121,6 +133,8 @@ def analyze_bytes(before, after, document, before_sha256=None, after_sha256=None
         'impact_witnesses': [
             {'root': root, 'route': witness(graph, root, changed)}
             for root in affected_roots],
+        'impact_causes': [causes(graph, root, modified, removed)
+                          for root in affected_roots],
         'unaffected_roots': sorted(set(roots) - impacted),
         'affected_declared_paths': sorted(impacted),
         'direct_modified_paths': sorted(modified & closure),

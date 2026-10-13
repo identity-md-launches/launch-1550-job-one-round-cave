@@ -1,0 +1,46 @@
+{
+  "runtime": "Python 3.12.3, standard library only",
+  "tests": {
+    "command": "python3 -B line-2/tools/handoff-impact/test_impact.py",
+    "exit_code": 0,
+    "passed": 34,
+    "new_tests": 5
+  },
+  "offline_demo": {
+    "sockets_disabled": true,
+    "impact_causes": [
+      {
+        "root": "README.md",
+        "modified_paths": [
+          "handoff.py"
+        ],
+        "removed_paths": []
+      }
+    ],
+    "archive_sha256": "aaa03a258268263186f610e17ad8ede6851c8597b70a7ec29ae6b283f72f60bb"
+  },
+  "unchanged_check": {
+    "sockets_disabled": true,
+    "impact_causes": [],
+    "requires_review": false
+  },
+  "structure": {
+    "goal_bytes_unchanged": true,
+    "all_older_tracked_record_files_unchanged": true,
+    "older_record_file_count": 58,
+    "record_count": 40,
+    "record_shape_valid": true,
+    "artifact_hash_matches": true,
+    "wall_outputs_identical": true,
+    "png_dimensions": [
+      1254,
+      1254
+    ],
+    "jpeg_dimensions": [
+      512,
+      512
+    ],
+    "changed_pixels_outside_patch": 0
+  },
+  "check_note": "Initial structure check assumed every ancestral JSON had a JPEG. Record 02 has no supplied JPEG; corrected check compares all actual inherited tracked files. No ancestral file created or modified."
+}

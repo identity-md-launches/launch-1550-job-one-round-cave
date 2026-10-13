@@ -1,0 +1,36 @@
+{
+  "number": 40,
+  "png": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "8-bit RGB PNG",
+    "bytes": 3945516,
+    "sha256": "759dbe90b1e76e04d688337d8471fa705fb6be6e183b2cfdcf1f662eed79736f"
+  },
+  "jpeg": {
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 75990
+  },
+  "inherited_sha256": "b100f05023869e7d15cfa7e9fdb9748dd2ce9a62b2c749fbdddcf750a45e80c3",
+  "added_region": [
+    105,
+    130,
+    255,
+    216
+  ],
+  "changed_pixels": 2921,
+  "changed_pixels_outside_region": 0,
+  "visual_review": "Final whole PNG and 512px JPEG inspected locally. Inherited Pepe has a broad mouth and heavy-lidded eyes. Each inherited hand has four fingers and one thumb, five digits total. No new hands, stencils or text. Ancestors outside the vacant pigment patch are pixel-identical. No prohibited visual elements observed.",
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Inherited photographic rock texture preserved as supplied.",
+    "Small mark subdued at thumbnail size.",
+    "Local visual review is not independent artistic certification."
+  ]
+}

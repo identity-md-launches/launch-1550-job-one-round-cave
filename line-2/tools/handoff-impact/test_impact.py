@@ -86,6 +86,50 @@ class ImpactTests(unittest.TestCase):
         self.document['dependencies']['root'].reverse()
         self.assertEqual(self.analyze(self.changed(leaf=b'x'))['impact_witnesses'], expected)
 
+    def test_causes_do_not_stop_at_changed_root(self):
+        report = self.analyze(self.changed(root=b'x', mid=b'x', leaf=b'x'))
+        self.assertEqual(report['impact_witnesses'], [{'root': 'root', 'route': ['root']}])
+        self.assertEqual(report['impact_causes'], [{'root': 'root',
+            'modified_paths': ['leaf', 'mid', 'root'], 'removed_paths': []}])
+
+    def test_causes_include_multiple_branches_and_removals(self):
+        self.document['roots'] = ['root']
+        self.document['dependencies']['root'] = ['mid', 'other']
+        files = self.changed(leaf=b'x')
+        del files['other']
+        report = self.analyze(files)
+        self.assertEqual(report['impact_causes'], [{'root': 'root',
+            'modified_paths': ['leaf'], 'removed_paths': ['other']}])
+
+    def test_causes_cycles_shared_leaves_and_outside_changes(self):
+        self.document['dependencies']['leaf'] = ['root']
+        self.document['dependencies']['other'] = ['leaf']
+        report = self.analyze(self.changed(leaf=b'x', other=b'x'))
+        self.assertEqual(report['impact_causes'], [
+            {'root': 'other', 'modified_paths': ['leaf', 'other'], 'removed_paths': []},
+            {'root': 'root', 'modified_paths': ['leaf'], 'removed_paths': []}])
+        self.document['roots'] = ['root']
+        report = self.analyze(self.changed(other=b'x', new=b'x'))
+        self.assertEqual(report['impact_causes'], [])
+        self.assertEqual(report['changed_outside_closure'], ['other'])
+
+    def test_causes_deterministic_order_and_empty_check(self):
+        self.document['dependencies']['root'] = ['other', 'mid']
+        first = self.analyze(self.changed(other=b'x', leaf=b'x'))
+        self.document['dependencies']['root'].reverse()
+        self.document['roots'].reverse()
+        self.assertEqual(first, self.analyze(self.changed(other=b'x', leaf=b'x')))
+        self.assertEqual(self.analyze()['impact_causes'], [])
+
+    def test_causes_enforce_completed_report_budget(self):
+        report = self.analyze(self.changed(leaf=b'x'))
+        size = len(impact.encode(report))
+        with patch.object(impact, 'MAX_REPORT_BYTES', size):
+            self.assertEqual(self.analyze(self.changed(leaf=b'x')), report)
+        with patch.object(impact, 'MAX_REPORT_BYTES', size - 1):
+            with self.assertRaisesRegex(ValueError, 'report'):
+                self.analyze(self.changed(leaf=b'x'))
+
     def test_removal_is_diagnostic(self):
         files = dict(self.files)
         del files['leaf']

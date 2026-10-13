@@ -120,3 +120,31 @@ passed locally under Python 3.12.3. Python 3.10 is not installed here; the
 reported fixture failure was repaired by passing an absolute scratch directory
 to TemporaryDirectory before converting its name to a workspace-relative path.
 No production path guard was relaxed.
+
+## Step 40 — every declared cause of impact
+
+`impact_causes` complements the single shortest witness with **every** modified
+or removed baseline payload reachable from each affected root. Each entry has
+`root`, sorted `modified_paths`, and sorted `removed_paths`. Traversal continues
+past changed roots and changed intermediate files, so a short witness cannot
+hide other changes. Shared descendants are listed for each affected root;
+cycles and self-edges terminate. Unaffected roots have no entry. Added files
+and unrelated changes keep their existing comparison diagnostics.
+
+The existing demo command now reports `handoff.py` as the sole modified cause
+for `README.md`. The unchanged-archive command reports an empty cause list.
+All 34 behavioral tests passed locally under Python 3.12.3, including five new
+checks for multiple branches, modified/removed separation, changed roots with
+changed descendants, cycles, shared leaves, ordering, unrelated additions and
+exact report-budget boundaries. The implementation still uses only Python's
+standard library, writes nothing, and executes no archive payloads.
+
+Cause collection visits each reachable node once per affected root, taking
+O(R × (V + E)) traversal work and O(V) temporary traversal memory, within the
+existing graph limits. The complete report, including causes, retains its
+99,000-byte cap; a report that exceeds it fails with no partial JSON. This
+additive field does not change `requires_review`, exit codes, graph digests,
+archive verification or existing witness selection. Consumers requiring an
+exact report-key set should accept the new field. These are all causes under
+the **declared baseline graph**; declaration completeness and semantic software
+behavior still require separate review.

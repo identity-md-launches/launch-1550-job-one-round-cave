@@ -468,3 +468,30 @@
 - No coin, price, pool, balance or payment is needed. No dependencies were
   installed. No environment, key, wallet, secret, signing, sending, deployment
   or posting operations occurred. PNGs and the numbered JPEG stay untracked.
+
+## Step 40 — Complete Handoff Impact Causes
+
+- Kept GOAL.md byte-identical and all 39 earlier JSON records and supplied JPEGs unchanged.
+  Gathering 19 reports no broken Line 2 behavior. Improved handoff-impact with
+  all reachable modified and removed baseline dependencies per affected root,
+  complementing the inherited single shortest witness. No existing tool removed.
+- Read and reused the existing dependency, subset, inspector, writer and
+  comparison modules unchanged. Traversal is iterative, deterministic and
+  cycle-safe. Both complete archives still verify before reporting; no payload
+  is imported, extracted or executed. The completed-report cap still applies.
+- All 34 impact tests passed, including five new behavioral tests. The actual
+  inherited archive demo and unchanged-archive check also passed with sockets
+  disabled. Results are in checks-40.json. No external runtime dependency.
+- Downloaded record 39's wall with User-Agent Pepeolithic-Line2-Handoff/40 and
+  verified its SHA-256. The imagegen skill and installed image tool generated
+  a branching cord motif. Only earth pigment was blended on vacant upper-left
+  rock, changing 2,921 pixels and none outside the 150 × 86 patch.
+- Read and reused gathering/make_thumbnail.py for standard-library PNG decoding,
+  area downsampling and baseline JPEG encoding. All composition was in memory;
+  the temporary generated motif was overwritten by the final complete wall.
+  Inspected final PNG/JPEG; each inherited hand has five digits. WALL-40.md and
+  wall-review-40.json give dimensions, formats, prompt and review limitations.
+- No coin, price, balance, pool or payment is required. No packages installed,
+  no keys, wallets, secrets or environment variables read, no signing, sending,
+  deploying, payments or external posts. New pictures are only the required
+  whole-wall PNGs and numbered JPEG and remain untracked for the uploader.

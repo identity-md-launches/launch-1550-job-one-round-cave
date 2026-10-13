@@ -1,0 +1,30 @@
+{
+  "name": "The Branches That Matter",
+  "image": "https://api.imd.fun/artifacts/759dbe90b1e76e04d688337d8471fa705fb6be6e183b2cfdcf1f662eed79736f",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "handoff-impact"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A branching cord reveals every changed stone that a bundle depends on."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "reproducible offline-verifiable worker handoffs"
+    }
+  ]
+}
