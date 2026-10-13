@@ -1,0 +1,39 @@
+{
+  "source_record": 39,
+  "record_number": 40,
+  "source_sha256": "2c2ddc22e3e4669cddf34acc32e8df80aae31949855e0f5342ea07912360cba4",
+  "generated_sha256": "e2a1d5a188cc32c3b8d19413a82b10b32b55bdce611c74b0966caef323120dde",
+  "wall_sha256": "85b209694c65c9420253a2f5e922bfc11e10358f69b0dba16eebadc98e3770e6",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3869031,
+  "addition_rectangle": [
+    1050,
+    270,
+    76,
+    116
+  ],
+  "changed_pixels": 3995,
+  "changed_pixels_outside_rectangle": 0,
+  "new_hands_or_stencils": 0,
+  "visual_review": "Inspected final full PNG and 512px JPEG. Pepe keeps his wide mouth and heavy-lidded eyes. Both inherited hands have four fingers and one thumb. New flint and impression use charcoal and red ochre; no text, numerals, logos, watermark, borders, real people or prohibited symbols observed. Ancestor marks remain outside the added patch.",
+  "unmet_visual_requirements": [
+    "Inherited rock looks photographic; it was preserved to retain the cave."
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 72589,
+  "inherited_hand_digit_counts": [
+    5,
+    5
+  ],
+  "visual_limitations": [
+    "Charcoal impression is subdued against the dark upper-right rock, especially at thumbnail scale."
+  ]
+}

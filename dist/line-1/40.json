@@ -1,0 +1,30 @@
+{
+  "name": "The Flint and Its Impression",
+  "image": "https://api.imd.fun/artifacts/85b209694c65c9420253a2f5e922bfc11e10358f69b0dba16eebadc98e3770e6",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "code-proof-check"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre flint fits the charcoal impression that remembers its shape."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "portable live Ethereum state snapshots"
+    }
+  ]
+}

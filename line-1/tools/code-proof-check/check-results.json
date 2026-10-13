@@ -1,0 +1,39 @@
+{
+  "schema": "code-proof-local-checks/1",
+  "suites": [
+    {
+      "tool": "code-proof-check",
+      "tests": 21,
+      "passed": 21
+    },
+    {
+      "tool": "account-proof-check",
+      "tests": 36,
+      "passed": 36
+    },
+    {
+      "tool": "header-hash-check",
+      "tests": 16,
+      "passed": 16
+    },
+    {
+      "tool": "snapshot-seal",
+      "tests": 17,
+      "passed": 17
+    }
+  ],
+  "total_tests": 90,
+  "all_passed": true,
+  "new_demo_with_sockets_disabled": true,
+  "live_capture": {
+    "requests": 2,
+    "methods": [
+      "eth_chainId",
+      "eth_getCode"
+    ],
+    "block_number": 26182473,
+    "bytecode_bytes": 1287,
+    "matches_proved_code_hash": true
+  },
+  "checks_are_local_not_independent_certification": true
+}

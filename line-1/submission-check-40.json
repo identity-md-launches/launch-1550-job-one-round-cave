@@ -1,0 +1,27 @@
+{
+  "schema": "line1-local-check/1",
+  "record_number": 40,
+  "wall_png_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_png_format": "8-bit RGB PNG",
+  "wall_sha256": "85b209694c65c9420253a2f5e922bfc11e10358f69b0dba16eebadc98e3770e6",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 72589,
+  "older_records_unchanged": true,
+  "goal_unchanged": true,
+  "changed_paths_in_scope": true,
+  "new_nonartifact_files_under_100kb": true,
+  "named_png_outputs_untracked": true,
+  "visual_review": "line-1/wall-review-40.json",
+  "unmet_visual_requirements": [
+    "Inherited rock looks photographic; it was preserved to retain the cave."
+  ],
+  "tool_demo": "python3 -B line-1/tools/code-proof-check/code_proof_check.py demo",
+  "checks_are_local_not_independent_certification": true
+}
