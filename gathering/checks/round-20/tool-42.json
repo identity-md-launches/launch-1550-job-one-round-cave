@@ -1,0 +1,21 @@
+{
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_absent_context_stays_absent (test_proposal_review.ProposalTests.test_absent_context_stays_absent) ... ok\ntest_all_contexts_and_exact_large_arithmetic (test_proposal_review.ProposalTests.test_all_contexts_and_exact_large_arithmetic) ... ok\ntest_balance_is_ethereum_only (test_proposal_review.ProposalTests.test_balance_is_ethereum_only) ... ok\ntest_cli_exit_and_no_partial_report (test_proposal_review.ProposalTests.test_cli_exit_and_no_partial_report) ... ok\ntest_context_validation (test_proposal_review.ProposalTests.test_context_validation) ... ok\ntest_creation_keeps_null_destination (test_proposal_review.ProposalTests.test_creation_keeps_null_destination) ... ok\ntest_hex_case_is_not_a_change (test_proposal_review.ProposalTests.test_hex_case_is_not_a_change) ... ok\ntest_json_and_rlp_review_equivalence_with_ordered_duplicates (test_proposal_review.ProposalTests.test_json_and_rlp_review_equivalence_with_ordered_duplicates) ... ok\ntest_multiple_failures_are_all_retained (test_proposal_review.ProposalTests.test_multiple_failures_are_all_retained) ... ok\ntest_no_network_needed (test_proposal_review.ProposalTests.test_no_network_needed) ... ok\ntest_original_input_only_and_bounds (test_proposal_review.ProposalTests.test_original_input_only_and_bounds) ... ok\ntest_pending_competition_and_gap_are_diagnostics (test_proposal_review.ProposalTests.test_pending_competition_and_gap_are_diagnostics) ... ok\ntest_stdin_json_and_transport_newline (test_proposal_review.ProposalTests.test_stdin_json_and_transport_newline) ... ok\ntest_thresholds (test_proposal_review.ProposalTests.test_thresholds) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.284s\n\nOK\n",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "line-3/tools/proposal-review",
+    "-p",
+    "test_proposal_review.py",
+    "-v"
+  ],
+  "kind": "suite",
+  "tests_run": 14,
+  "checked_at": "2026-10-13T10:40:56.044018+00:00",
+  "workspace": "test/scratch/round-20-mirror"
+}

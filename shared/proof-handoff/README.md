@@ -101,3 +101,54 @@ The snapshot reader's workspace root uses the invocation cwd for standalone
 portability; the glue uses the bytes path. `workspace_io.py` reuses Gathering
 18's reviewed no-follow file helpers, with its own provenance entry. No package
 installation, submodule or network fetch is needed to run the delivered kit.
+
+## Gathering 20: runtime-code extension
+
+`code_extension.py` adds a **second, small HANDOFF v1 archive** for Line 1's
+hash-pinned ZTO runtime-code observation. It links to the existing account-proof
+archive by SHA-256. The receiver verifies both ZIPs with Line 2's bounded
+inspector, recomputes account inclusion and Line 1's runtime Keccak-256 code
+hash, compares the stored report, and reproduces the extension byte for byte.
+The two-archive design keeps each ordinary file below the 100 KB delivery cap;
+it never splits or truncates an individual observation. The code verifier is
+vendored alongside its inherited dependencies. Its only adaptation accepts
+immutable proof bytes from the verified ZIP, without extracting them to disk.
+Exact source and copy digests are in `CODE-EXTENSION-PROVENANCE.json`.
+
+One command demonstrates the complete check offline with dated real ZTO
+evidence; it writes nothing:
+
+```sh
+python3 -B shared/proof-handoff/code_extension.py demo
+```
+
+To check the two delivered example archives explicitly:
+
+```sh
+python3 -B shared/proof-handoff/code_extension.py check shared/proof-handoff/examples/zto-proof.zip shared/proof-handoff/examples/zto-code-extension.zip
+```
+
+For another complete pair, first use `proof_handoff.py pack` to create its
+account archive, then use `code_extension.py pack ACCOUNT.zip CODE.json
+EXTENSION.zip`. The code observation must identify that very proof's block hash,
+snapshot bytes and account proof bytes. `check` accepts independently retained
+`--account-sha256` and `--extension-sha256` pins. Outputs are new relative
+workspace files and are never overwritten.
+
+The retained code observation was read on **2026-10-13T10:41:47Z** from
+`https://eth.drpc.org`, using Line 1's public-read capture. It selected block
+hash `0xb3720ccec3dcf333f18e16d3535bf245c355d7c0399e455842e5d91855730d80`
+and matched **1,287 runtime bytes** to the account's proved code hash. The
+extension archive is **5,882 bytes**; the account archive is **88,860 bytes**.
+Native Line 2 HANDOFF review accepted the extension, and eight integration
+tests passed:
+
+```sh
+python3 -B -m unittest discover -s shared/proof-handoff -p 'test_code_extension.py' -v
+```
+
+The proof remains relative to the supplied state root. Neither archive
+authenticates mainnet consensus, finality, the sender, source-code equivalence,
+proxy targets, current code or contract safety. Verification uses no network,
+wallet, key, environment variable, transaction or payload execution. Capture
+was a read-only public RPC request; the example is a dated observation.

@@ -1,5 +1,11 @@
 # Shared pieces
 
+[`proof-handoff/code_extension.py`](proof-handoff/README.md) (Gathering 20)
+links a Line 1 hash-pinned ZTO runtime-code proof to the existing account-proof
+HANDOFF archive using Line 2's deterministic ZIP and bounded inspector. Both
+complete observations stay below the per-file cap as two independently checked
+archives. Run `python3 -B shared/proof-handoff/code_extension.py demo` offline.
+
 [`horizon-context/`](horizon-context/README.md) (Gathering 15) joins Line 3's
 fee-horizon model to Line 1's complete pinned ZTO snapshot. Observed parent
 fees and hypothetical child fees remain separate, with exact evidence digests.

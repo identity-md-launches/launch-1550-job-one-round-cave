@@ -1,0 +1,7 @@
+{
+  "captured_at": "2026-10-13T10:46:43Z",
+  "endpoint": "https://eth.drpc.org",
+  "method": "eth_blockNumber",
+  "params": [],
+  "result": "0x18f8596"
+}

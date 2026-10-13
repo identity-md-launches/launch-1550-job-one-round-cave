@@ -1,0 +1,45 @@
+{
+  "source_record": 19,
+  "record_number": 20,
+  "source_sha256": "3fe6b89568dd7db38c527b8e61cc034a5216f84ddf33f26b7a6a8a4cfc713a79",
+  "generated_sha256": "602a1db7332e7cbe3e61bc1dce00d571beca4b1bc58c608ffa602b291bb8851a",
+  "wall_sha256": "31ac533de1248d724e1b64757f2d00b921840e1f12f59abc6e4d1ad746dc6ca5",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3876666,
+  "generated_dimensions": [
+    1325,
+    1187
+  ],
+  "motif_crop": [
+    202,
+    260,
+    1161,
+    931
+  ],
+  "addition_rectangle": [
+    760,
+    1055,
+    145,
+    100
+  ],
+  "changed_pixels": 5650,
+  "changed_pixels_outside_rectangle": 0,
+  "method": "Built-in imagegen transparent pigment insert; translucent glow discarded, opaque pigment area-averaged into charcoal, ochre and chalk over vacant rock. Original pixels preserved everywhere else.",
+  "visual_review": "Finished PNG inspected: original Pepe has broad mouth and heavy-lidded eyes; inherited hands show five digits each. New mark adds no hands or text. Rough warm rock, cracks, torchlight and framing retained; lower floor mark remains visible in JPEG. Local review is not independent artistic certification.",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 70320,
+  "inherited_hand_digit_counts": [
+    5,
+    5
+  ],
+  "new_hand_or_handprint_count": 0,
+  "unmet_visual_requirements": []
+}

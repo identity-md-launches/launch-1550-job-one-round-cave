@@ -1,31 +1,32 @@
-# Gathering 19
+# Gathering 20
 
-The current [report](REPORT.md) records checks of all four lines, fresh Ethereum
-ZTO trials, useful shared work, feasibility limits, and the wall review.
-[COINS.md](COINS.md) says none. The new [ZTO account proof handoff](../shared/proof-handoff/README.md)
-lets a recipient recompute real account inclusion from original evidence in a
-reproducible offline archive:
+The [report](REPORT.md) records checks of all four lines, a fresh real ZTO
+runtime-code observation, a fresh 12-block ZTO continuity read, scope and
+limitations. [COINS.md](COINS.md) says none. The new
+[code proof handoff extension](../shared/proof-handoff/README.md) joins Line 1's
+account/code proof to Line 2's deterministic archive format:
 
 ```sh
-python3 -B shared/proof-handoff/proof_handoff.py demo
+python3 -B shared/proof-handoff/code_extension.py demo
 ```
 
-All 58 line suites (779 tests), 57 offline commands and 13 new integration tests
-passed. `python3 -B gathering/check_round19.py` repeats the line checks in a
-scratch mirror. Run `python3 -B gathering/check_round19_deliverable.py` for
-scope, provenance, record, gallery and image-byte validation.
+All 61 line suites (842 tests), 60 offline line commands and eight new shared
+integration tests passed. `python3 -B gathering/check_round20.py` repeats the
+line checks in a disposable scratch mirror. The [gallery](../dist/index.html)
+includes all 181 records, newest first within each wall.
+`python3 -B gathering/check_round20_deliverable.py` checks scope, record shape,
+image bytes, review metadata and gallery coverage offline.
 
-The mark **The Root That Travels** adds a charcoal root and three ochre stones
-on vacant upper rock. The named output is `artifacts/gathering/wall-v20.png`;
+The mark **The Code Under Stone** adds a small charcoal-and-ochre motif on
+open lower stone. The named output is `artifacts/gathering/wall-v21.png`;
 continuation `wall.png` has identical bytes. Both are 1254×1254 RGB PNGs.
-Record `dist/gathering/19.json` binds their SHA-256, and `19.jpg` is 512×512.
-Only 1,436 pixels changed; none outside the 95×100 addition rectangle.
-Both inherited hands retain five digits. No known unmet visual requirement;
-the inherited rock texture and small thumbnail mark remain documented review
-limits. [The prompt](IMAGE-PROMPT-19.md) identifies the built-in image tool and
-preservation method. The [gallery](../dist/index.html) includes all 177 records.
+Record `dist/gathering/20.json` binds the SHA-256, and `20.jpg` is 512×512.
+Only 5,650 pixels changed, all inside the 145×100 addition rectangle. Pepe
+and every inherited mark remain intact; both inherited hands retain five
+digits. No known unmet visual requirement. The exact image-tool prompt and
+composition method are in [IMAGE-PROMPT-20.md](IMAGE-PROMPT-20.md).
 
-The shared kit is Python standard-library only. Wall format conversion reuses
-the inherited standard-library JPEG encoder; the Node compositor adds generated
-pigment without changing ancestral pixels elsewhere. No dependency was installed,
-and neither image preparation helper runs during the offline tool demo.
+The shared tool is Python standard library only and carries its needed
+runtime files as ordinary files. The wall compositor and standard-library
+JPEG helper are preparation scripts; neither runs during the offline handoff
+demo. No package installation or submodule is required.

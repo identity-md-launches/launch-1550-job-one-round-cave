@@ -1,0 +1,21 @@
+{
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_bad_evidence_aborts_before_network (test_code_proof.CaptureTests.test_bad_evidence_aborts_before_network) ... ok\ntest_capture_only_two_bound_reads (test_code_proof.CaptureTests.test_capture_only_two_bound_reads) ... ok\ntest_malformed_rpc_responses (test_code_proof.CaptureTests.test_malformed_rpc_responses) ... ok\ntest_request_policy_before_transport (test_code_proof.CaptureTests.test_request_policy_before_transport) ... ok\ntest_transport_empty_proxies_user_agent_and_bounds (test_code_proof.CaptureTests.test_transport_empty_proxies_user_agent_and_bounds) ... ok\ntest_wrong_bytecode_aborts_capture (test_code_proof.CaptureTests.test_wrong_bytecode_aborts_capture) ... ok\ntest_wrong_chain_stops_before_code (test_code_proof.CaptureTests.test_wrong_chain_stops_before_code) ... ok\ntest_actual_proof_is_verified_not_just_its_digest (test_code_proof.EvidenceTests.test_actual_proof_is_verified_not_just_its_digest) ... ok\ntest_all_anchor_and_schema_fields_bound (test_code_proof.EvidenceTests.test_all_anchor_and_schema_fields_bound) ... ok\ntest_byte_limit_and_uppercase_hex (test_code_proof.EvidenceTests.test_byte_limit_and_uppercase_hex) ... ok\ntest_code_mutations_rejected (test_code_proof.EvidenceTests.test_code_mutations_rejected) ... ok\ntest_demo_and_check_cli_without_network (test_code_proof.EvidenceTests.test_demo_and_check_cli_without_network) ... ok\ntest_empty_truncated_appended_or_invalid_code (test_code_proof.EvidenceTests.test_empty_truncated_appended_or_invalid_code) ... ok\ntest_failure_emits_no_partial_json (test_code_proof.EvidenceTests.test_failure_emits_no_partial_json) ... ok\ntest_hash_selector_is_exact_and_canonical_boolean (test_code_proof.EvidenceTests.test_hash_selector_is_exact_and_canonical_boolean) ... ok\ntest_missing_and_extra_fields (test_code_proof.EvidenceTests.test_missing_and_extra_fields) ... ok\ntest_proof_bytes_binding_includes_whitespace (test_code_proof.EvidenceTests.test_proof_bytes_binding_includes_whitespace) ... ok\ntest_real_code_offline (test_code_proof.EvidenceTests.test_real_code_offline) ... ok\ntest_sha3_is_not_ethereum_keccak (test_code_proof.EvidenceTests.test_sha3_is_not_ethereum_keccak) ... ok\ntest_strict_json_and_file_size (test_code_proof.EvidenceTests.test_strict_json_and_file_size) ... ok\ntest_workspace_file_guards (test_code_proof.EvidenceTests.test_workspace_file_guards) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 1.236s\n\nOK\n",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "line-1/tools/code-proof-check",
+    "-p",
+    "test_code_proof.py",
+    "-v"
+  ],
+  "kind": "suite",
+  "tests_run": 21,
+  "checked_at": "2026-10-13T10:40:43.888357+00:00",
+  "workspace": "test/scratch/round-20-mirror"
+}

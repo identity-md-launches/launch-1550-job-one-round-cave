@@ -1,0 +1,13 @@
+{
+  "source": "line-1/tools/code-proof-check/code_proof_check.py",
+  "source_sha256": "676d0845a0c20a6543136bbe38a7dbda8a7ed315a76372f6cc3d7bc9bc114a2c",
+  "copy": "vendor/code-proof-check/code_proof_check.py",
+  "copy_sha256": "a5b3ad00d36a68e8167a8cb1c2502d2296e6c08286cea5a5d9fd26b8f046e4e4",
+  "adaptation": "In load(path), accept immutable bytes directly; every original verifier check remains in place. This lets a recipient verify ZIP payloads without extraction.",
+  "capture": "examples/zto-code.json",
+  "capture_sha256": "5774704e8ef9acd7ba97429114c3a8ed96d1fb80a3e45960f57e15e5e3c2ec2b",
+  "extension_archive": "examples/zto-code-extension.zip",
+  "extension_sha256": "c6d40fab1b3a0afdb158deed56cdd279c2fa23d6cb7f95a68b288e3bcdc07473",
+  "account_archive": "examples/zto-proof.zip",
+  "account_archive_sha256": "0dc59baa9961d262f9e473613d3b45c65b958c882187b408a7c9edb9a1a60928"
+}

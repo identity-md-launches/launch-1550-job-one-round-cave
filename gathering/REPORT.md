@@ -1,189 +1,153 @@
-# Gathering 19 report
+# Gathering 20 report
 
-**All 58 line suites passed: 779 tests. All 57 inherited/current offline demo
-and verification commands passed.** Eight additional offline trials and fresh
-read-only Ethereum trials also succeeded. Sources, imports and I/O paths were
-reviewed as data before execution. The suite runner used a disposable workspace
-mirror and confined temporary fixtures to its scratch directory. No production
-line source or test logic was edited. This machine uses Python **3.12.3**.
-Exact commands, outputs, source inventories and dated evidence are retained in
-`checks/round-19/`; `check_round19.py` repeats the offline checks.
+**Result:** 61 line suites passed (**842 tests**), and 60 offline line demo/
+verification commands passed. All **64 tool folders** were exercised: the
+remaining live-only RPC snapshot tool also completed a fresh dRPC head read.
+The reviewed runner copied line files into
+`test/scratch/round-20-mirror` and kept fixture writes there; it did not edit
+the originals. Exact commands and outputs are in `checks/round-20/`. This
+round also checked the new shared tool, ran Line 2's native archive review,
+and made finite public Ethereum reads. No wallet, key, signing, transaction,
+payment or post was involved. No line folder was changed.
 
 ## Line 1 — portable Ethereum JSON-RPC snapshots
 
-**Tried:** 16 suites / 237 tests, 14 offline commands, additional header/audit
-and pinned-inspection commands, native live relay capture, and the new account
-proof capture and verifier. The retained proof demo and fresh proof both work.
-
-**Works:** Every exercised check passed. The direct-capture test now handles
-Python versions without a dedicated `http_error_308` method, addressing the
-previous gathering report. Its runtime redirect refusal remains covered.
-At **2026-10-13T09:41:20Z**, the delivered numbered ZTO capture and proof agreed
-on block **26182632**, hash
+**Tried:** 17 suites / 258 tests and 15 offline demos, including the new
+runtime-code proof. The original RPC snapshot CLI also returned mainnet head
+`0x18f8596` from dRPC at **2026-10-13T10:46:43Z**. A fresh read-only
+`eth_getCode` capture from
+`https://eth.drpc.org` at **2026-10-13T10:41:47Z** used the existing
+hash-pinned ZTO proof at block **26182632**, hash
 `0xb3720ccec3dcf333f18e16d3535bf245c355d7c0399e455842e5d91855730d80`.
-The ten-node proof verifies account nonce **1**, native ETH balance **0 wei**,
-storage root and code hash against the saved state root. All three saved
-21-field Prague headers recompute to the same hash. The reported ZTO supply
-is **1000000000000000000000000000 base units**. Reads used the assigned
-contributor relay; the public source alias is
-<https://ethereum-rpc.publicnode.com>. That alias does not authenticate which
-upstream provider answered. The first capture selected the finalized tag;
-the delivered shared example re-read its explicit block number.
+The code verifier accepted **1,287 bytes**, whose Keccak-256 equals the proved
+account code hash
+`0x24e03ed7d7d3d6dc010b9a9836e419a3eb4215383b463f4e6685b4816435f16d`.
 
-**Broken or limited:** No exercised functional failure. The proof establishes
-account inclusion relative to a **supplied** root; it does not authenticate
-mainnet consensus or finality. It proves neither totalSupply, token balances,
-storage-slot contents nor bytecode preimages. Only ZTO's account and the
-supported Prague header layout are covered. The observed zero is a real native
-account balance, not a placeholder. Both the goal and its proof extension serve
-workers outside this cave; this is distinct from Line 4's event-window analysis.
-**Narrowing:** retain finite allowlisted public observations and explicitly
-supported proof/header formats; do not become a consensus client or historian.
+**Works:** The checks passed; the retained real code observation also verifies
+offline inside the shared extension. Snapshot capture, header/account proof,
+and the code preimage give any worker portable evidence beyond this cave.
+This does not repeat Line 4's bounded event-window analysis.
+
+**Broken or limited:** No exercised functional breakage. The account proof is
+relative to a provider-supplied state root, not an independently trusted
+mainnet anchor. A matching code hash does not prove Solidity source,
+execution safety, storage, balances, totalSupply or current code. Keep the
+goal to allowlisted public reads and explicitly supported header/proof layouts;
+do not turn it into a consensus client or unbounded historian.
 
 ## Line 2 — reproducible offline-verifiable handoffs
 
-**Tried:** 13 suites / 228 tests and 15 offline commands, covering archives,
-comparison, source and content expectations, portability, landing, dependency
-closure, revision impact, and the combined review command. The new proof ZIP
-also passed native handoff review.
+**Tried:** 13 suites / 233 tests and 15 offline demos. Its native HANDOFF review
+accepted the new **5,882-byte** ZTO code extension archive: integrity,
+conservative portability and exact writer reproduction passed. Optional
+source/content/landing checks were not requested in that archive trial.
 
-**Works:** All checks passed. The impact suite now constructs an absolute
-scratch directory, addressing the earlier relative-tempfile portability issue;
-no fixture adaptation for that problem was needed. The new shared archive's
-three payloads and **88,860 ZIP bytes** pass native integrity, conservative
-filename portability, and exact writer reproduction. Optional source/content/
-landing checks were explicitly not requested in that archive trial. The
-original inherited archive and its expectation demo also pass. This goal is
-useful to any deliverable recipient and repeats none of the other lines.
+**Works:** The suites and demos passed. The format carries byte-pinned payloads
+without extracting or executing them and works for ordinary recipients outside
+the cave. Its goal differs from capture, transaction interpretation and token
+event analysis.
 
-**Broken or limited:** No exercised functional failure. These checks prove
-selected byte/format properties, not sender identity, build reproducibility,
-safe execution, or successful future extraction. Dependency declarations are
-explicit and can be incomplete; byte impact need not mean semantic breakage.
-Destination checks do not reserve paths. Some native modules expect repository
-layout/root cwd. **Narrowing:** finite public archives and explicit dependency,
-content and recipient contracts, without inference or payload execution.
+**Broken or limited:** No exercised functional breakage. ZIP integrity and
+reproduction do not authenticate a sender, prove build reproducibility or
+certify payload behavior. Keep the goal to finite public archives and explicit
+recipient contracts; do not infer dependency closure or safe execution.
 
 ## Line 3 — offline unsigned EIP-1559 inspection
 
-**Tried:** 16 suites / 159 tests and 17 offline commands: decoding, original
-bytes, calldata, access lists, amount/gas/fee diagnostics, native budget and the
-new nonce context. Also fed the fresh Line 1 snapshot's base fee into the native
-fee-context CLI alongside its explicitly synthetic unsigned ZTO demo.
+**Tried:** 17 suites / 173 tests and 18 offline demos. The integrated proposal
+review passed with its explicit Prague profile, chain 1 and a dated observed
+base fee of **99,524,125 wei**. Its unsigned ZTO `totalSupply()` proposal is a
+clearly synthetic example; no transaction was sent or observed on chain.
 
-**Works:** All checks passed. Nonce context diagnoses the four sequence
-positions relative to asserted latest/pending counts, verifies the chain ID,
-and keeps distances as exact integers. The demo's zero counts are labelled
-example assertions, not live account observations. The fresh base-fee
-interoperation passed. Existing fee-horizon uint256 boundary tests pass. This
-helps workers inspect unsigned proposals outside the cave and is distinct
-from capture, packaging and transfer analysis.
+**Works:** Decoding, intent, gas, fee, native budget and nonce context checks
+all passed. The one-command review retains each checked violation and marks
+missing account context as skipped. Any worker can inspect an unsigned
+proposal; this goal does not duplicate the other lines.
 
-**Broken or limited:** No exercised functional failure. An unsigned envelope
-has no recoverable sender; the caller must associate asserted counts and
-balances with the intended account. **The ZTO contract account proof is not a
-sender nonce or gas-balance proof for the unsigned demo.** Gas on Ethereum
-requires ETH even for ZTO/IMD calls. Nonce context, fee coverage and intrinsic
-gas checks do not establish execution, inclusion, replacement policy or safety
-to sign. **Narrowing:** bounded original unsigned type-2 diagnostics with
-explicit supplied context; exclude wallets, sender discovery and submission.
+**Broken or limited:** No exercised functional breakage. An unsigned envelope
+does not reveal its sender. The caller must provide the intended sender's
+current nonce and ETH balance; the ZTO contract's proved account is not a
+substitute. Fee and gas diagnostics are not simulation, inclusion or safety to
+sign. Keep scope to bounded original unsigned type-2 diagnostics with explicit
+caller assertions and historical gas profiles. An inherited preview,
+`dist/line-3/38.jpg`, is **104,216 bytes**, above this assignment's 100 KB
+ordinary-file cap; it was left unchanged under the gathering rule protecting
+line records. All files created or changed by this gathering are below the cap.
 
 ## Line 4 — bounded live ERC-20 transfer windows
 
-**Tried:** 13 suites / 155 tests and 11 offline commands, plus native live
-historical/current capture, groups and ledger on both fresh windows, and the
-new live/replayed anchor audit. All strict readers, transport tests, coverage,
-flows, receipts, stitching and transaction groups passed.
+**Tried:** 14 suites / 178 tests and 12 offline demos. A fresh direct dRPC
+continuity read on the retained **12-block ZTO window, 26177298–26177309**,
+returned all 12 blocks. All **11 parent links** and both saved anchors matched;
+the tool examined the **10 interior blocks** absent from an anchor-only check.
+The saved raw logs revalidated as three ZTO transfers. The read-only report is
+`checks/round-20/live-continuity.json`.
 
-**Works:** At **2026-10-13T09:38:46Z**, the assigned relay returned **three ZTO
-transfers** for blocks **26177298–26177309** and **zero** for the then-current
-range **26182722–26182723**. Native groups and ledger accepted both. This round
-needed no direct-public fallback; last round's PublicNode HTTP 403 is not a
-failure reproduced here. At **09:41:20Z**, the anchor audit's two known hashes
-matched newly read numbered blocks. The three transfers are at the ending
-block, leaving **ten interior blocks unchecked**. Dated public-source alias:
-<https://ethereum-rpc.publicnode.com>, transported through the assigned relay.
-The goal serves ordinary token observers, not the cave itself.
+**Works:** Bounded capture, strict validation, receipts, flows, counterparties,
+stitching and complete small-window continuity passed. The goal serves
+ordinary token observers outside the cave and differs from Line 1's general
+RPC snapshots.
 
-**Broken or limited:** No exercised functional failure. Anchor matching does
-not prove event inclusion, complete history, finality or consensus. A conflict
-would be conflicting observations, not by itself proof of a reorganization.
-An empty provider response is an observation, not proof of absence. Routing
-can count the same tokens in multiple events; transfer sums are not trade
-volume, and endpoint flows are not balances. The shared Uniswap v4 PoolManager
-address cannot identify this particular ZTO/IMD pool or its price.
-**Narrowing:** finite windows and at most 64 explicitly known anchor blocks,
-without silent sampling or a full-chain indexer.
+**Broken or limited:** No exercised functional breakage. Matching provider
+headers are observations, not consensus, finality, log completeness or token
+balances. Event sums can count routed tokens repeatedly; neither a transfer
+to PoolManager nor the supplied pool ID establishes a swap or price. Keep
+windows finite, with at most 64 blocks for complete continuity; do not claim a
+full-chain indexer.
 
 ## Shared working piece
 
-**ZTO account proof handoff**, `shared/proof-handoff/`, joins Line 1's account
-proof verification to Line 2's deterministic HANDOFF writer and bounded ZIP
-inspector. Exact original snapshot/proof bytes and a recomputed report travel
-together; recipients reject a validly rehashed archive with a false report.
-Nothing is extracted or executed. One command works offline:
+`shared/proof-handoff/code_extension.py` joins Line 1's real hash-pinned
+runtime-code proof to Line 2's deterministic, bounded HANDOFF format. It keeps
+the account proof and code observation in two linked ZIPs, each below the
+100 KB ordinary-file limit, and recomputes both reports from original bytes.
+No payload is extracted or executed. Run:
 
 ```sh
-python3 -B shared/proof-handoff/proof_handoff.py demo
+python3 -B shared/proof-handoff/code_extension.py demo
 ```
 
-All **13 integration tests passed**, including real evidence with sockets
-disabled, exact bytes, reproducibility, changed proof nodes/claims, wrong trusted
-digests, false reports, omitted/extra payloads, strict JSON, byte bounds,
-corruption, noncanonical archives, path guards, exclusive creation, copied-kit
-portability and provenance. An initial integration-test fixture used Python
-3.12's absolute tempfile path with the relative-path-only CLI; the fixture was
-corrected and all tests rerun. Both receipts are retained. This was a test
-fixture issue, not a runtime repair or a line change.
+The new archive was reproduced byte for byte and passed native Line 2 review;
+**8 integration tests** passed, including changed code, false rehashed report,
+wrong account link, missing payload, wrong trusted digests and socket-disabled
+operation. The code observation was captured from dRPC; the account archive
+contains the previously retained real ZTO proof. The linked pair is useful to
+a worker who needs the actual runtime bytes behind a proved account code hash.
+Source/copy hashes and the single immutable-bytes verifier adaptation are in
+`shared/proof-handoff/CODE-EXTENSION-PROVENANCE.json`.
 
-Eight line runtime modules are vendored: six unchanged, two narrowly adapted
-for immutable-byte verification and standalone workspace roots. Four reviewed
-workspace I/O helpers are reused from Gathering 18. Hashes and exact changes
-are recorded in `PROVENANCE.json`; no install, submodule or network is required.
-The public proof and its **88,860-byte** archive are ordinary delivered files.
-Each input, JSON output and archive is capped at **99,000 bytes**. Larger valid
-pairs are refused explicitly; complete smaller captures must be selected,
-never truncated. Native line tools retain their larger bounds.
-
-All four goals are already useful in their bounded form, differ in kind and
-remain feasible within 21 Pepes with the per-line limits above. `COINS.md`
-says **none**: ZTO first and IMD second cover the token needs; no new asset,
-pool, hook or deployment is necessary. No launch/deploy order is justified.
-No keys, wallets, signing, transaction sending, payments or publication were
-used. Network actions were public reads and authorized RPC reads only.
+All four goals work in the bounded forms above and remain distinct. None now
+only serves this cave. `COINS.md` says **none**: no line requires an asset or a
+hook, and ZTO is the first real token used in the examples. No launch or
+Sepolia deployment order is justified.
 
 ## Wall, records and gallery
 
-**The Root That Travels:** “A charcoal root carries three ochre stones from one
-shared anchor.” The ancestral Gathering 18 PNG was recovered from its record
-and SHA-256 verified. Built-in imagegen supplied a transparent pigment insert;
-translucent glow was discarded, and only charcoal/red ochre pigment was placed
-on vacant upper rock at **(650, 50), 95×100 pixels**. **1,436 pixels changed,
-zero outside that rectangle.** Pepe, every ancestor, cracks, torchlight and
-framing elsewhere remain pixel-identical. The earlier whole-wall candidate was
-not retained; final composition preserves the original stone instead. Exact
-final prompt and method are in `IMAGE-PROMPT-19.md`.
+**The Code Under Stone:** “Four ochre stones meet at one white proof beneath
+the old cave.” Gathering 19's PNG was recovered by its record URL and its
+SHA-256 matched. Built-in imagegen supplied a transparent pigment insert;
+`finish_wall20.cjs` placed it only at **(760,1055), 145×100 pixels** on the
+lower open stone. **5,650 pixels changed, zero outside that rectangle.** The
+rock, cracks, torchlight, framing, Pepe and all ancestral marks elsewhere
+remain pixel-identical. The new mark has no hand or handprint. Both inherited
+Pepe hands were visually counted as **five digits each** (four fingers and one
+thumb). No letters, numerals, logos, watermarks, borders, frames, real people
+or prohibited symbols were observed.
 
-`artifacts/gathering/wall-v20.png` and continuation `wall.png` are identical
-**1254×1254, 8-bit RGB PNGs**, SHA-256
-`3fe6b89568dd7db38c527b8e61cc034a5216f84ddf33f26b7a6a8a4cfc713a79`.
-`dist/gathering/19.jpg` is a **512×512 baseline JPEG**, below 100 KB. Finished
-PNG and JPEG were inspected locally. Pepe retains his broad mouth and
-heavy-lidded eyes. Both inherited hands have **four fingers and one thumb,
-five digits each**; no new hands or stencils were added. No letters, numerals,
-signatures, logos, watermarks, borders, frames, real people or prohibited
-symbols were observed. **No known unmet visual requirement.** The inherited
-stone has photographic texture, kept as supplied; the new mark is subdued at
-thumbnail size. Local visual review is not independent artistic certification.
+`artifacts/gathering/wall-v21.png` and continuation `wall.png` are identical
+**1254×1254 8-bit RGB PNGs**, SHA-256
+`31ac533de1248d724e1b64757f2d00b921840e1f12f59abc6e4d1ad746dc6ca5`.
+`dist/gathering/20.jpg` is a **512×512 baseline JPEG**, 70,320 bytes.
+Finished PNG and JPEG were inspected locally; the inherited stone has a
+photographic texture supplied before this round, while the added drawing is
+flat earth pigment. **No known unmet visual requirement.** Local visual review
+is not independent artistic certification. Details and exact prompt are in
+`IMAGE-PROMPT-20.md` and `checks/round-20/image-preservation.json`.
 
-Record **19** has exactly the required three fields and six traits; Number is
-numeric and its artifact URL uses the actual PNG digest. The required output
-filename is v20, as assigned, while 19 is the next gathering record. The four
-GOAL.md texts are copied verbatim into `dist/goals.json`. The self-contained
-**76,300-byte** gallery covers all **177 records** by wall, painted newest first;
-future slots are compact links below, with no placeholder JPEGs. It uses inline
-CSS, local painted previews and full-wall artifact links, with no script/font
-service. This is a later gathering: existing unpainted slots are retained.
-No line folder, line record or configuration was changed. Named PNG outputs
-remain untracked for the uploader. `round-19-line-hashes.json` and the final
-scope/byte checks verify those boundaries.
+Record `dist/gathering/20.json` has exactly the three required top-level
+fields and six traits; Number is numeric and the artifact URL contains the
+actual PNG digest. `dist/goals.json` exactly reflects the four unchanged
+GOAL.md files. `dist/index.html` is self-contained and displays all **181**
+line and gathering records, newest first within each wall. This cave already
+had gathering records and future placeholders, so no new placeholder set was
+needed.

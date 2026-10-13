@@ -1,0 +1,21 @@
+{
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_all_null_is_not_empty_or_consistent (test_continuity.ContinuityTests.test_all_null_is_not_empty_or_consistent) ... ok\ntest_bad_header_fields (test_continuity.ContinuityTests.test_bad_header_fields) ... ok\ntest_broken_parent_is_localized (test_continuity.ContinuityTests.test_broken_parent_is_localized) ... ok\ntest_changed_last_anchor (test_continuity.ContinuityTests.test_changed_last_anchor) ... ok\ntest_cli_live_status_and_no_partial_json_on_failure (test_continuity.ContinuityTests.test_cli_live_status_and_no_partial_json_on_failure) ... ok\ntest_cli_requires_explicit_mode (test_continuity.ContinuityTests.test_cli_requires_explicit_mode) ... ok\ntest_collect_calls_only_exact_read_plan_and_strips_extras (test_continuity.ContinuityTests.test_collect_calls_only_exact_read_plan_and_strips_extras) ... ok\ntest_collect_null_is_retained (test_continuity.ContinuityTests.test_collect_null_is_retained) ... ok\ntest_conflict_takes_precedence_over_missing (test_continuity.ContinuityTests.test_conflict_takes_precedence_over_missing) ... ok\ntest_duplicate_omitted_extra_and_reordered_blocks_rejected (test_continuity.ContinuityTests.test_duplicate_omitted_extra_and_reordered_blocks_rejected) ... ok\ntest_empty_transfer_projection_keeps_real_chain (test_continuity.ContinuityTests.test_empty_transfer_projection_keeps_real_chain) ... ok\ntest_equal_and_decreasing_timestamps (test_continuity.ContinuityTests.test_equal_and_decreasing_timestamps) ... ok\ntest_exact_schema_and_types (test_continuity.ContinuityTests.test_exact_schema_and_types) ... ok\ntest_exactly_64_blocks_plan_is_allowed (test_continuity.ContinuityTests.test_exactly_64_blocks_plan_is_allowed) ... ok\ntest_missing_boundary_is_not_matching (test_continuity.ContinuityTests.test_missing_boundary_is_not_matching) ... ok\ntest_missing_interior_breaks_two_links (test_continuity.ContinuityTests.test_missing_interior_breaks_two_links) ... ok\ntest_oversized_window_prevents_network (test_continuity.ContinuityTests.test_oversized_window_prevents_network) ... ok\ntest_real_demo_without_network (test_continuity.ContinuityTests.test_real_demo_without_network) ... ok\ntest_report_does_not_mutate_inputs (test_continuity.ContinuityTests.test_report_does_not_mutate_inputs) ... ok\ntest_requested_number_boolean_and_float_refused (test_continuity.ContinuityTests.test_requested_number_boolean_and_float_refused) ... ok\ntest_single_block_uses_both_roles_no_parent_assertion (test_continuity.ContinuityTests.test_single_block_uses_both_roles_no_parent_assertion) ... ok\ntest_tampered_capture_prevents_network (test_continuity.ContinuityTests.test_tampered_capture_prevents_network) ... ok\ntest_wrong_chain_and_rpc_error_abort (test_continuity.ContinuityTests.test_wrong_chain_and_rpc_error_abort) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.037s\n\nOK\n",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "line-4/tools/transfer-window-continuity",
+    "-p",
+    "test_continuity.py",
+    "-v"
+  ],
+  "kind": "suite",
+  "tests_run": 23,
+  "checked_at": "2026-10-13T10:41:06.196307+00:00",
+  "workspace": "test/scratch/round-20-mirror"
+}

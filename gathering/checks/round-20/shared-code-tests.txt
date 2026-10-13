@@ -1,0 +1,13 @@
+test_account_and_extension_digests_checked (test_code_extension.CodeExtensionTests.test_account_and_extension_digests_checked) ... ok
+test_changed_code_rejected (test_code_extension.CodeExtensionTests.test_changed_code_rejected) ... ok
+test_corrupt_account_archive_rejected (test_code_extension.CodeExtensionTests.test_corrupt_account_archive_rejected) ... ok
+test_missing_payload_rejected (test_code_extension.CodeExtensionTests.test_missing_payload_rejected) ... ok
+test_no_network_demo (test_code_extension.CodeExtensionTests.test_no_network_demo) ... ok
+test_real_pair_and_reproducibility (test_code_extension.CodeExtensionTests.test_real_pair_and_reproducibility) ... ok
+test_tampered_rehashed_report_rejected (test_code_extension.CodeExtensionTests.test_tampered_rehashed_report_rejected) ... ok
+test_wrong_account_link_rejected (test_code_extension.CodeExtensionTests.test_wrong_account_link_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.748s
+
+OK
